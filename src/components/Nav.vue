@@ -8,9 +8,6 @@
   </div>
 </template>
 <script setup>
-import { defineProps } from 'vue'
-defineProps({
-  data: Array,
-})
+
 </script>
 <style scoped></style>
