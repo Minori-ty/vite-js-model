@@ -1,7 +1,8 @@
 <template>
-    <!-- <router-view></router-view> -->
-    <img src="./assets/logo.png" alt="" />
-    <el-button>点击</el-button>
+  <!-- <router-view></router-view> -->
+  <img src="./assets/logo.png" alt="" />
+  <el-button>点击</el-button>
+  <el-input></el-input>
 </template>
 
 <script setup></script>
