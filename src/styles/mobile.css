@@ -1,76 +1,61 @@
-// 屏幕划分为10份
-
-@number: 10;
-
 html {
   font-size: 50px;
 }
-
 @media screen and (max-width: 360px) {
   html {
-    font-size: (320px / @number);
+    font-size: 32px;
     background-color: skyblue;
   }
 }
-
 @media screen and (min-width: 360px) {
   html {
-    font-size: (360px / @number);
+    font-size: 36px;
     background-color: hotpink;
   }
 }
-
 @media screen and (min-width: 375px) {
   html {
     background-color: gold;
-    font-size: (375px / @number);
+    font-size: 37.5px;
   }
 }
-
 @media screen and (min-width: 384px) {
   html {
-    font-size: (384px / @number);
+    font-size: 38.4px;
   }
 }
-
 @media screen and (min-width: 400px) {
   html {
-    font-size: (400px / @number);
+    font-size: 40px;
   }
 }
-
 @media screen and (min-width: 414px) {
   html {
-    font-size: (414px / @number);
+    font-size: 41.4px;
   }
 }
-
 @media screen and (min-width: 424px) {
   html {
-    font-size: (424px / @number);
+    font-size: 42.4px;
   }
 }
-
 @media screen and (min-width: 480px) {
   html {
-    font-size: (480px / @number);
+    font-size: 48px;
   }
 }
-
 @media screen and (min-width: 540px) {
   html {
-    font-size: (540px / @number);
+    font-size: 54px;
   }
 }
-
 @media screen and (min-width: 720px) {
   html {
-    font-size: (720px / @number);
+    font-size: 72px;
   }
 }
-
 @media screen and (min-width: 750px) {
   html {
-    font-size: (750px / @number);
+    font-size: 75px;
   }
 }
