@@ -27,7 +27,7 @@ img {
 }
 .el-scrollbar {
     height: 100%;
-    background-color: #eee;
+    background-color: #eeeeee;
 }
 // .main .el-scrollbar__wrap {
 //   overflow: scroll;
