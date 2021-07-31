@@ -1,8 +1,8 @@
 <template>
-  <Nav :data="data"></Nav>
-  <Header></Header>
-  <router-view></router-view>
-  <Footer></Footer>
+    <Nav :data="data"></Nav>
+    <Header></Header>
+    <router-view></router-view>
+    <Footer></Footer>
 </template>
 <script setup>
 import Nav from 'components/Nav.vue'

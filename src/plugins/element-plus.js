@@ -5,8 +5,8 @@ import { ElButton, ElInput, ElScrollbar } from 'element-plus'
 const plugins = [ElButton, ElInput, ElScrollbar]
 
 export default app => {
-  // app.use(ElementPlus)
-  plugins.forEach(plugin => {
-    app.use(plugin)
-  })
+    // app.use(ElementPlus)
+    plugins.forEach(plugin => {
+        app.use(plugin)
+    })
 }

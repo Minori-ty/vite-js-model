@@ -25,6 +25,5 @@ module.exports = {
         SwitchCase: 1,
       },
     ],
-    tabWidth: 4,
   },
 }
