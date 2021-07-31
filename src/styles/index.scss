@@ -1,11 +1,11 @@
 div {
-    transform: translate(50px);
+    position: relative;
     margin: 0;
     padding: 0;
-    background-color: red;
     width: 100px;
     height: 100px;
     font-size: 20px;
     border: 1px solid black;
-    position: relative;
+    background-color: red;
+    transform: translate(50px);
 }
