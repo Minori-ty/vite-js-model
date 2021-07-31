@@ -9,10 +9,11 @@
         "style": "stylelint \"src/**/*.{vue,css,scss}\" --fix"
     },
     "gitHooks": {
-        "pre-commit": "lint-staged && npm run style"
+        "pre-commit": "lint-staged"
     },
     "lint-staged": {
-        "*.{js,vue}": "eslint"
+        "*.{js,vue}": "eslint",
+        "*.{vue,css,scss}": "stylelint --fix"
     },
     "dependencies": {
         "axios": "^0.21.1",
