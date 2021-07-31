@@ -9,8 +9,7 @@
         "style": "stylelint \"src/**/*.{vue,css,scss}\" --fix"
     },
     "gitHooks": {
-        "pre-commit": "lint-staged",
-        "pre-push": "stylelint --fix"
+        "pre-commit": "lint-staged"
     },
     "lint-staged": {
         "*.{js,vue}": "eslint"
