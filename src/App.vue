@@ -14,7 +14,6 @@
 <script setup>
 import data from './data/data.json'
 console.log(data)
-const a = 1
 </script>
 
 <style lang="scss">
