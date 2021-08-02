@@ -3,16 +3,19 @@
     "scripts": {
         "dev": "vite --open",
         "build": "vite build",
-        "serve": "vite preview",
-        "lint": "eslint \"src/**/*.{js,vue}\"",
+              "serve": "vite preview",
+ "lint": "eslint \"src/**/*.{js,vue}\"",
         "fix": "eslint \"src/**/*.{js,vue}\" --fix",
-        "style": "stylelint \"src/**/*.{vue,css,scss}\" --fix"
+                      "style": "stylelint \"src/**/*.{vue,css,scss}\" --fix",
+        "prettier": "npx prettier --write package.json",
+        "all": "npx prettier --write package.json && stylelint \"src/**/*.{vue,css,scss}\" --fix && eslint \"src/**/*.{js,vue}\""
     },
     "gitHooks": {
-        "pre-commit": "lint-staged"
+        "pre-commit": "npm run all"
     },
     "lint-staged": {
-        "*.{js,vue}": "eslint"
+        "*.{js,vue}": "eslint",
+        "src/**/*.{vue,css,less}": "stylelint"
     },
     "dependencies": {
         "axios": "^0.21.1",

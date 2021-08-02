@@ -26,12 +26,14 @@ img {
     background-color: hotpink;
 }
 .el-scrollbar {
-    height: 100%;
     background-color: #eeeeee;
+    height: 100%;
 }
-// .main .el-scrollbar__wrap {
-//   overflow: scroll;
-//   width: 110%;
-//   height: 100%;
-// }
+.main .el-scrollbar__wrap {
+    overflow: scroll;
+    height: 100%;
+    width: 110%;
+    padding: 0;
+    margin: 0;
+}
 </style>
