@@ -14,7 +14,12 @@ module.exports = {
         'block-opening-brace-space-before': 'always',
         'property-no-unknown': null,
         'no-empty-source': null,
-
+        'selector-pseudo-element-no-unknown': [
+            true,
+            {
+                ignorePseudoElements: [':deep'],
+            },
+        ],
         'order/properties-order': [
             'position',
             'top',
