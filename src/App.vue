@@ -8,32 +8,32 @@
         <el-scrollbar :always="true">
             <p class="item" v-for="item in 200" :key="item">{{ item }}</p>
         </el-scrollbar>
-         </div>
+    </div>
 </template>
 
 <script setup>
-   import data from './data/data.json'
+import data from './data/data.json'
 console.log(data)
 </script>
 
 <style lang="scss">
 img {
-    height: 700px;
     width: 700px;
+    height: 700px;
 }
 .main {
     // height: 1500px
     background-color: hotpink;
 }
 .el-scrollbar {
-    background-color: #eeeeee;
     height: 100%;
+    background-color: #eeeeee;
 }
 .main .el-scrollbar__wrap {
+    overflow: scroll;
     margin: 0;
     padding: 0;
     width: 110%;
     height: 100%;
-    overflow: scroll;
 }
 </style>
