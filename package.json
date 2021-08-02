@@ -6,8 +6,8 @@
         "serve": "vite preview",
         "lint": "eslint \"src/**/*.{js,vue}\"",
         "fix": "eslint . --fix",
-        "style": "stylelint \"src/**/*.{vue,css,scss}\" --fix",
-        "prettier": "npx prettier .",
+        "style": "stylelint \"src/**/*.{vue,css,less}\" --fix",
+        "prettier": "npx prettier --write \"src/**/*.{vue,css}\"",
         "all": "npm run prettier && npm run style && npm run fix"
     },
     "gitHooks": {

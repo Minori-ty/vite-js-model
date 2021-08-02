@@ -8,7 +8,7 @@
         <el-scrollbar :always="true">
             <p class="item" v-for="item in 200" :key="item">{{ item }}</p>
         </el-scrollbar>
-       </div>
+         </div>
 </template>
 
 <script setup>
@@ -18,22 +18,22 @@ console.log(data)
 
 <style lang="scss">
 img {
-    width: 700px;
     height: 700px;
+    width: 700px;
 }
 .main {
     // height: 1500px
     background-color: hotpink;
 }
 .el-scrollbar {
-    height: 100%;
     background-color: #eeeeee;
+    height: 100%;
 }
 .main .el-scrollbar__wrap {
-    overflow: scroll;
     margin: 0;
     padding: 0;
     width: 110%;
     height: 100%;
+    overflow: scroll;
 }
 </style>
