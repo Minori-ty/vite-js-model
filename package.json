@@ -5,10 +5,10 @@
         "build": "vite build",
         "serve": "vite preview",
         "lint": "eslint \"src/**/*.{js,vue}\"",
-        "fix": "eslint \"src/**/*.{js,vue}\" --fix",
+        "fix": "eslint . --fix",
         "style": "stylelint \"src/**/*.{vue,css,scss}\" --fix",
-        "prettier": "npx prettier --write package.json",
-        "all": "npx prettier --write package.json && stylelint \"src/**/*.{vue,css,scss}\" --fix && eslint \"src/**/*.{js,vue}\" --fix"
+        "prettier": "npx prettier .",
+        "all": "npm run prettier && npm run style && npm run fix"
     },
     "gitHooks": {
         "pre-commit": "npm run all",

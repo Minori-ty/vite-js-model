@@ -8,11 +8,11 @@
         <el-scrollbar :always="true">
             <p class="item" v-for="item in 200" :key="item">{{ item }}</p>
         </el-scrollbar>
-    </div>
+       </div>
 </template>
 
 <script setup>
-import data from './data/data.json'
+   import data from './data/data.json'
 console.log(data)
 </script>
 
