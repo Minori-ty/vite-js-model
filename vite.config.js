@@ -3,19 +3,23 @@ import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import styleImport from 'vite-plugin-style-import'
 import viteCompression from 'vite-plugin-compression'
+import externalGlobals from 'rollup-plugin-external-globals'
+import ViteComponents, { ElementPlusResolver } from 'vite-plugin-components'
 
-// https://vitejs.dev/config/
 export default defineConfig({
     base: './',
     plugins: [
         vue(),
+        ViteComponents({
+            customComponentResolvers: [ElementPlusResolver()],
+        }),
         styleImport({
             libs: [
                 {
                     libraryName: 'element-plus',
                     esModule: true,
                     resolveStyle: name => {
-                        return `element-plus/lib/theme-chalk/${name}.css` // 按需引入样式
+                        return `element-plus/lib/theme-chalk/${name}.css`
                     },
                 },
             ],
@@ -65,6 +69,13 @@ export default defineConfig({
                 entryFileNames: 'static/js/[name]-[hash].js',
                 assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
             },
+            external: ['element-plus', 'vue'],
+            plugins: [
+                externalGlobals({
+                    vue: 'Vue',
+                    'element-plus': 'ElementPlus',
+                }),
+            ],
         },
     },
     server: {
