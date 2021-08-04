@@ -10,17 +10,13 @@ export default defineConfig({
     base: './',
     plugins: [
         vue(),
-        ViteComponents({
-            customComponentResolvers: [ElementPlusResolver()],
-        }),
+        ViteComponents({ customComponentResolvers: [ElementPlusResolver()] }),
         styleImport({
             libs: [
                 {
                     libraryName: 'element-plus',
                     esModule: true,
-                    resolveStyle: name => {
-                        return `element-plus/lib/theme-chalk/${name}.css`
-                    },
+                    resolveStyle: name => `element-plus/lib/theme-chalk/${name}.css`,
                 },
             ],
         }),
