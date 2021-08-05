@@ -10,7 +10,9 @@ export default defineConfig({
     base: './',
     plugins: [
         vue(),
+        // 按需引入组件
         ViteComponents({ customComponentResolvers: [ElementPlusResolver()] }),
+        // 按需引入样式
         styleImport({
             libs: [
                 {
@@ -65,6 +67,8 @@ export default defineConfig({
                 entryFileNames: 'static/js/[name]-[hash].js',
                 assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
             },
+
+            // 配置CDN
             external: ['element-plus', 'vue'],
             plugins: [
                 externalGlobals({

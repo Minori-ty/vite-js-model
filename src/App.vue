@@ -10,9 +10,7 @@
 
         <el-card>
             <el-input></el-input>
-            <el-button type="text" @click="open"
-                >点击打开 Message Box</el-button
-            >
+            <el-button type="text" @click="open">点击打开 Message Box</el-button>
         </el-card>
         <p class="item" v-for="item in 200" :key="item">{{ item }}</p>
     </el-scrollbar>

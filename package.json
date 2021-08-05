@@ -8,7 +8,8 @@
         "fix": "eslint . --fix",
         "style": "stylelint \"src/**/*.{vue,css,less}\" --fix",
         "prettier": "npx prettier --write \"**/**/*.{vue,css,less,json}\"",
-        "all": "npm run prettier && npm run style && npm run fix"
+        "all": "npm run prettier && npm run style && npm run --fix",
+        "test": "jest"
     },
     "gitHooks": {
         "pre-commit": "npm run all",
@@ -28,14 +29,18 @@
         "vuex": "^4.0.2"
     },
     "devDependencies": {
+        "@babel/preset-env": "^7.15.0",
         "@vitejs/plugin-vue": "^1.2.5",
         "@vue/compiler-sfc": "^3.0.5",
         "@vue/eslint-config-prettier": "^6.0.0",
+        "@vue/test-utils": "^1.2.2",
         "autoprefixer": "^10.3.1",
         "babel-eslint": "^10.1.0",
+        "babel-jest": "^27.0.6",
         "eslint": "^6.8.0",
         "eslint-plugin-prettier": "^3.4.0",
         "eslint-plugin-vue": "^7.15.0",
+        "jest": "^27.0.6",
         "less": "^4.1.1",
         "lint-staged": "^11.1.1",
         "postcss": "^8.3.5",
@@ -49,6 +54,8 @@
         "vite": "^2.4.2",
         "vite-plugin-components": "^0.13.2",
         "vite-plugin-style-import": "^1.0.1",
+        "vue-jest": "^3.0.7",
+        "vue-template-compiler": "^2.6.14",
         "yorkie": "^2.0.0"
     },
     "config": {
