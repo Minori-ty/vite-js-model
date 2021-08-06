@@ -14,8 +14,8 @@ jobs:
             - name: 迁出代码
               # 使用action库  actions/checkout获取源码
               uses: actions/checkout@master
-            # 安装Node10
 
+            # 安装Node10
             - name: 安装node.js
               # 使用action库  actions/setup-node安装node
               uses: actions/setup-node@v1
@@ -46,3 +46,6 @@ jobs:
                   REMOTE_USER: 'root'
                   # 目标地址
                   TARGET: '/usr/local/nginx/vue-in-action'
+
+            - name: linux下载nodejs
+              run: yum -y install nodejs
