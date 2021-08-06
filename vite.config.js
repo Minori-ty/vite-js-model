@@ -6,6 +6,18 @@ import viteCompression from 'vite-plugin-compression'
 import externalGlobals from 'rollup-plugin-external-globals'
 import ViteComponents, { ElementPlusResolver } from 'vite-plugin-components'
 
+//判断生产环境时移除console
+var terserOptions = {}
+if ((process.env.NODE_ENV = 'production')) {
+    terserOptions = {
+        compress: {
+            //移除console
+            drop_console: true,
+            drop_debugger: true,
+        },
+    }
+}
+
 export default defineConfig({
     base: './',
     plugins: [
@@ -51,12 +63,7 @@ export default defineConfig({
         },
     },
     build: {
-        terserOptions: {
-            //生产环境移除console
-            compress: {
-                drop_console: true,
-            },
-        },
+        terserOptions,
         // 取消计算文件大小，加快打包速度
         brotliSize: false,
         sourcemap: true,
