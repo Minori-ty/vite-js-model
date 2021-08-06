@@ -45,7 +45,15 @@ jobs:
                   # 用户
                   REMOTE_USER: 'root'
                   # 目标地址
-                  TARGET: '/usr/local/nginx/vue-in-action'
+                  TARGET: '/root/Docker'
 
-            - name: linux下载nodejs
-              run: yum -y install nodejs
+            - name: 连接阿里云执行ssh指令
+              uses: cross-the-world/ssh-scp-ssh-pipelines@latest
+              with:
+                  host: '8.210.170.119'
+                  user: 'root'
+                  pass: 'Xu1563844579'
+                  first_ssh: |
+                      cd /root/Docker/dist
+                      docker rm -f web-server
+                      docker run --name web-server -d -p 80:80 -v $(pwd):/usr/share/nginx/html nginx
