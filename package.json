@@ -11,14 +11,6 @@
         "all": "npm run prettier && npm run style && npm run --fix",
         "test": "jest"
     },
-    "gitHooks": {
-        "pre-commit": "npm run all",
-        "pre-push": "lint-staged"
-    },
-    "lint-staged": {
-        "*.{js,vue}": "eslint",
-        "src/**/*.{vue,css,less}": "stylelint"
-    },
     "dependencies": {
         "axios": "^0.21.1",
         "element-plus": "^1.0.2-beta.55",

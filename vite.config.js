@@ -92,3 +92,13 @@ export default defineConfig({
         port: 3001,
     },
 })
+
+// package.json:
+// "gitHooks": {
+//     "pre-commit": "npm run all",
+//     "pre-push": "lint-staged"
+// },
+// "lint-staged": {
+//     "*.{js,vue}": "eslint",
+//     "src/**/*.{vue,css,less}": "stylelint"
+// },
