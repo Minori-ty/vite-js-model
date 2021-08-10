@@ -14,5 +14,22 @@ module.exports = {
         //   mediaQuery: false, //（布尔值）允许在媒体查询中转换px。
         //   minPixelValue: 3, //设置要替换的最小像素值(3px会被转rem)。 默认 0
         // }),
+        require('postcss-px-to-viewport')({
+            unitToConvert: 'px',
+            viewportWidth: 375,
+            unitPrecision: 5,
+            propList: ['*'],
+            viewportUnit: 'vw',
+            fontViewportUnit: 'vw',
+            selectorBlackList: [],
+            minPixelValue: 1,
+            mediaQuery: false,
+            replace: true,
+            exclude: /\/src\/mobile\/phone.vue/,
+            include: /\/src\/mobile\/mobile.vue/,
+            landscape: false,
+            landscapeUnit: 'vw',
+            landscapeWidth: 667,
+        }),
     ],
 }

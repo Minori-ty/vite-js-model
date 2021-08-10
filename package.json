@@ -45,6 +45,7 @@
         "lint-staged": "^11.1.1",
         "postcss": "^8.3.5",
         "postcss-plugin-px2rem": "^0.8.1",
+        "postcss-px-to-viewport": "^1.1.1",
         "prettier": "^2.3.2",
         "rollup-plugin-external-globals": "^0.6.1",
         "sass": "^1.35.2",

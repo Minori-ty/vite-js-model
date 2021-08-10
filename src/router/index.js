@@ -10,6 +10,14 @@ const router = createRouter({
                     path: '/login',
                     component: () => import('views/Home.vue'),
                 },
+                {
+                    path: '/mobile',
+                    component: () => import('../mobile/mobile.vue'),
+                },
+                {
+                    path: '/phone',
+                    component: () => import('../mobile/phone.vue'),
+                },
             ],
         },
         // {
