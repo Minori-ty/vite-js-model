@@ -8,7 +8,7 @@ import ViteComponents, { ElementPlusResolver } from 'vite-plugin-components'
 
 //判断生产环境时移除console
 var terserOptions = {}
-if ((process.env.NODE_ENV = 'production')) {
+if (process.env.NODE_ENV === 'production') {
     terserOptions = {
         compress: {
             //移除console
@@ -52,6 +52,8 @@ export default defineConfig({
             utils: resolve(__dirname, 'src/utils'),
             apis: resolve(__dirname, 'src/apis'),
             styles: resolve(__dirname, 'src/styles'),
+            public: resolve(__dirname, 'public'),
+            images: resolve(__dirname, 'src/assets/images'),
         },
     },
     // 引入全局scss文件

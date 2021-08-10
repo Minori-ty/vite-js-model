@@ -1,5 +1,5 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://pcapi-xiaotuxian-front-devtest.itheima.net/'
+axios.defaults.baseURL = 'http://127.0.0.1'
 
 export default axios
