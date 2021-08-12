@@ -5,8 +5,8 @@
 </template>
 
 <script setup>
-console.log(1111111)
-console.log(2222222)
+const a = 1
+console.log(a)
 </script>
 
 <style scoped lang="less">
