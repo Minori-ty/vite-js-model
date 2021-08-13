@@ -5,6 +5,7 @@ import styleImport from 'vite-plugin-style-import'
 import viteCompression from 'vite-plugin-compression'
 import externalGlobals from 'rollup-plugin-external-globals'
 import ViteComponents, { ElementPlusResolver } from 'vite-plugin-components'
+import viteImagemin from 'vite-plugin-imagemin'
 
 //判断生产环境时移除console
 var terserOptions = {}
@@ -23,7 +24,34 @@ export default defineConfig({
     plugins: [
         vue(),
         // 按需引入组件
-        ViteComponents({ customComponentResolvers: [ElementPlusResolver()] }),
+        // ViteComponents({ customComponentResolvers: [ElementPlusResolver()] }),
+        viteImagemin({
+            gifsicle: {
+                optimizationLevel: 7,
+                interlaced: false,
+            },
+            optipng: {
+                optimizationLevel: 7,
+            },
+            mozjpeg: {
+                quality: 20,
+            },
+            pngquant: {
+                quality: [0.8, 0.9],
+                speed: 4,
+            },
+            svgo: {
+                plugins: [
+                    {
+                        name: 'removeViewBox',
+                    },
+                    {
+                        name: 'removeEmptyAttrs',
+                        active: false,
+                    },
+                ],
+            },
+        }),
         // 按需引入样式
         styleImport({
             libs: [
@@ -52,14 +80,15 @@ export default defineConfig({
             utils: resolve(__dirname, 'src/utils'),
             apis: resolve(__dirname, 'src/apis'),
             styles: resolve(__dirname, 'src/styles'),
+            public: resolve(__dirname, 'public'),
         },
     },
     // 引入全局scss文件
     css: {
         preprocessorOptions: {
-            scss: {
-                additionalData: '@import "./src/styles/variables";',
-            },
+            // scss: {
+            //     additionalData: '@import "./src/styles/variables";',
+            // },
         },
     },
     build: {
@@ -78,10 +107,10 @@ export default defineConfig({
             // 配置CDN
             external: ['element-plus', 'vue'],
             plugins: [
-                externalGlobals({
-                    vue: 'Vue',
-                    'element-plus': 'ElementPlus',
-                }),
+                // externalGlobals({
+                //     vue: 'Vue',
+                //     'element-plus': 'ElementPlus',
+                // }),
             ],
         },
     },

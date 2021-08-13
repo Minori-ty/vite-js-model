@@ -1,45 +1,15 @@
 <template>
-    <!-- <router-view></router-view> -->
-
-    <!-- <img src="./assets/logo.png" alt="" />
-  <el-button>点击</el-button>
-  <el-input></el-input> -->
-
-    <el-scrollbar>
-        <el-alert title="成功提示的文案" type="success"> </el-alert>
-
-        <el-card>
-            <el-input></el-input>
-            <el-button type="text" @click="open">点击打开 Message Box</el-button>
-        </el-card>
-        <p class="item" v-for="item in 200" :key="item">{{ item }}</p>
-    </el-scrollbar>
+    <h1>这里是组件</h1>
+    <el-button>点击</el-button>
+    <el-input></el-input>
+    <img src="./src/assets/1.png" alt="" />
+    <img src="" alt="" />
+    <img src="src/" alt="" />
+    <img src="public/" alt="" />
 </template>
 
 <script setup>
-import data from './data/data.json'
-import { ElMessageBox } from 'element-plus'
-import { ElMessage } from 'element-plus'
-const open = () => {
-    ElMessageBox.alert('这是一段内容', '标题名称', {
-        confirmButtonText: '确定',
-        callback: action => {
-            ElMessage({
-                type: 'info',
-                message: `action: ${action}`,
-            })
-        },
-    })
-}
-console.log(data)
+import a from 'components/Header.vue'
 </script>
 
-<style>
-html,
-body,
-#app {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-</style>
+<style lang="less" scoped></style>
