@@ -2,6 +2,7 @@
     <router-link to="/mobile">mobile</router-link>
     <router-link to="/phone">phone</router-link>
     <router-view></router-view>
+    <img src="" alt="" />
 </template>
 
 <script setup>
