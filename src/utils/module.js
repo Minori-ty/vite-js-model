@@ -1,3 +1,2 @@
-export function fn(num) {
-    return num > 10 ? 10 : num
-}
+export var a = 1
+export var b = 2
