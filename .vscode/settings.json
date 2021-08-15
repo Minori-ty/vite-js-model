@@ -1,0 +1,10 @@
+{
+    "path-autocomplete.pathMappings": {
+        "$root": "${folder}/src/",
+        "images": "${folder}/src/assets/images",
+        "public": "${folder}/public"
+    },
+    "gutterpreview.paths": {
+        "images": "./src/assets/images"
+    }
+}

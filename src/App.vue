@@ -1,15 +1,7 @@
 <template>
-    <h1>这里是组件</h1>
-    <el-button>点击</el-button>
-    <el-input></el-input>
-    <img src="./src/assets/1.png" alt="" />
-    <img src="" alt="" />
-    <img src="src/" alt="" />
-    <img src="public/" alt="" />
+    <img src="images/1.png" alt="" />
 </template>
 
-<script setup>
-import a from 'components/Header.vue'
-</script>
+<script setup></script>
 
 <style lang="less" scoped></style>
