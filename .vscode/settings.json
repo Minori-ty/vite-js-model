@@ -1,5 +1,6 @@
 {
     "path-autocomplete.pathMappings": {
-        "$root": "${folder}/"
+        "$root": "${folder}/",
+        "images": "${folder}/src/assets/images/"
     }
 }

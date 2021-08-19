@@ -1,6 +1,8 @@
 <template>
+    <Nav></Nav>
     <img src="assets/images/logo.png" alt="" />
-    <img src="public/favicon.ico" alt="" />
 </template>
-<script setup></script>
+<script setup>
+import Nav from 'components/Nav.vue'
+</script>
 <style lang="less" scoped></style>

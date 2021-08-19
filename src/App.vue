@@ -1,17 +1,15 @@
 <template>
-    <router-link to="/mobile">mobile</router-link>
-    <router-link to="/phone">phone</router-link>
-    <router-view></router-view>
-    <img src="" alt="" />
+    <img src="/images/logo.png" alt="" />
+    <img :src="path" alt="" title="1" />
+    <img :src="obj.path" alt="" />
+    <!-- <img src="/pic/contact.jpg" alt="" /> -->
 </template>
 
 <script setup>
-const a = 1
-console.log(a)
+const path = '/images/logo.png'
+const obj = {
+    path: '/pic/contact.jpg',
+}
 </script>
 
-<style scoped lang="less">
-div {
-    width: 13.3333vw;
-}
-</style>
+<style scoped lang="less"></style>
