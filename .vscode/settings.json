@@ -4,7 +4,8 @@
         "images": "${folder}/src/assets/images",
         "public": "${folder}/public"
     },
+    "gutterpreview.sourceFolder": "D:/program/test/vite/vite-model/src/assets/images",
     "gutterpreview.paths": {
-        "images": "./src/assets/images"
+        "images/": "D:/program/test/vite/vite-model/src/assets/images/"
     }
 }

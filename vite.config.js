@@ -72,12 +72,12 @@ export default defineConfig({
             },
 
             // 配置CDN
-            // external: ['element-plus', 'vue'],
+            external: ['element-plus', 'vue'],
             plugins: [
-                // externalGlobals({
-                //     vue: 'Vue',
-                //     'element-plus': 'ElementPlus',
-                // }),
+                externalGlobals({
+                    vue: 'Vue',
+                    'element-plus': 'ElementPlus',
+                }),
             ],
         },
     },
