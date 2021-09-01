@@ -34,6 +34,7 @@ export default defineConfig({
     resolve: {
         alias: {
             '/images': 'src/assets/images',
+            images: 'src/assets/images',
             styles: resolve(__dirname, 'src/styles'),
             router: resolve(__dirname, 'src/router'),
             views: resolve(__dirname, 'src/views'),
