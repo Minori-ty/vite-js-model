@@ -32,7 +32,4 @@ module.exports = {
             },
         ],
     },
-      globals: {
-          defineProps: true,
-      },
 }
