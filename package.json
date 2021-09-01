@@ -15,6 +15,7 @@
         "axios": "^0.21.1",
         "element-plus": "^1.0.2-beta.70",
         "normalize.css": "^8.0.1",
+        "nprogress": "^0.2.0",
         "vite-plugin-compression": "^0.3.3",
         "vue": "^3.2.2",
         "vue-router": "^4.0.11",

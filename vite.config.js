@@ -11,7 +11,7 @@ export default defineConfig({
     plugins: [
         vue(),
         // 按需引入组件
-        // ViteComponents({ customComponentResolvers: [ElementPlusResolver()] }),
+        ViteComponents({ customComponentResolvers: [ElementPlusResolver()] }),
         // 按需引入样式
         styleImport({
             libs: [
@@ -43,6 +43,8 @@ export default defineConfig({
             utils: resolve(__dirname, 'src/utils'),
             src: resolve(__dirname, 'src'),
             assets: resolve(__dirname, 'src/assets'),
+            mobile: resolve(__dirname, 'src/views/Mobile'),
+            PC: resolve(__dirname, 'src/views/PC'),
             '/pic': 'src/assets/images/pic',
         },
     },

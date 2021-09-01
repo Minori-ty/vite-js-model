@@ -3,9 +3,10 @@ module.exports = {
     env: {
         browser: true,
         node: true,
+        es6: true
     },
     extends: [
-        'plugin:vue/vue3-essential',
+        'plugin:vue/vue2-essential',
         'eslint:recommended',
         '@vue/prettier',
     ],
@@ -18,9 +19,10 @@ module.exports = {
         'prettier/prettier': [
             'warn',
             {
-                // singleQute: none,
-                // semi: false,
-                // trailingComma:'es5'
+                singleQute: true,
+                semi: false,
+                // trailingComma:'es5',
+                endOfLine: 'auto',
             },
         ],
         indent: [
