@@ -18,9 +18,10 @@ module.exports = {
         'prettier/prettier': [
             'warn',
             {
-                // singleQute: true,
-                // semi: false,
-                // trailingComma:'es5'
+                singleQute: true,
+                semi: false,
+                // trailingComma:'es5',
+                endOfLine: 'auto',
             },
         ],
         indent: [
