@@ -1,7 +1,6 @@
 <template>
-    <!-- <img src="images/1.png" alt="" /> -->
-    <!-- <img src="./assets/images/1.png" alt="" /> -->
-    <a href=""></a>
+    <img src="./assets/images/1.png" alt="" />
+    <img src="./assets/images/pic/contact.jpg" alt="" />
     <router-view></router-view>
 </template>
 

@@ -5,6 +5,7 @@ import styleImport from 'vite-plugin-style-import'
 import viteCompression from 'vite-plugin-compression'
 import externalGlobals from 'rollup-plugin-external-globals'
 import ViteComponents, { ElementPlusResolver } from 'vite-plugin-components'
+import viteImagemin from 'vite-plugin-imagemin'
 
 export default defineConfig({
     base: './',
@@ -29,6 +30,33 @@ export default defineConfig({
             threshold: 10240,
             algorithm: 'gzip',
             ext: '.gz',
+        }),
+        viteImagemin({
+            gifsicle: {
+                optimizationLevel: 7,
+                interlaced: false,
+            },
+            optipng: {
+                optimizationLevel: 7,
+            },
+            mozjpeg: {
+                quality: 20,
+            },
+            pngquant: {
+                quality: [0.8, 0.9],
+                speed: 4,
+            },
+            svgo: {
+                plugins: [
+                    {
+                        name: 'removeViewBox',
+                    },
+                    {
+                        name: 'removeEmptyAttrs',
+                        active: false,
+                    },
+                ],
+            },
         }),
     ],
     resolve: {
