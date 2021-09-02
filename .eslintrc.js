@@ -3,12 +3,9 @@ module.exports = {
     env: {
         browser: true,
         node: true,
+        es6: true,
     },
-    extends: [
-        'plugin:vue/vue3-essential',
-        'eslint:recommended',
-        '@vue/prettier',
-    ],
+    extends: ['plugin:vue/vue3-essential', 'eslint:recommended', '@vue/prettier'],
     parserOptions: {
         parser: 'babel-eslint',
     },
@@ -18,9 +15,10 @@ module.exports = {
         'prettier/prettier': [
             'warn',
             {
-                // singleQute: none,
-                // semi: false,
-                // trailingComma:'es5'
+                singleQute: true,
+                semi: false,
+                // trailingComma:'es5',
+                endOfLine: 'auto',
             },
         ],
         indent: [

@@ -40,7 +40,7 @@ export default defineConfig({
                 optimizationLevel: 7,
             },
             mozjpeg: {
-                quality: 20,
+                quality: 50,
             },
             pngquant: {
                 quality: [0.8, 0.9],
@@ -62,6 +62,7 @@ export default defineConfig({
     resolve: {
         alias: {
             '/images': 'src/assets/images',
+            images: 'src/assets/images',
             styles: resolve(__dirname, 'src/styles'),
             router: resolve(__dirname, 'src/router'),
             views: resolve(__dirname, 'src/views'),
