@@ -1,4 +1,5 @@
 <template>
+    <div>1</div>
     <img src="/images/1.png" alt="" />
     <img src="./assets/images/1.png" alt="" />
     <img src="./assets/images/pic/contact.jpg" alt="" />
