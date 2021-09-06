@@ -46,7 +46,7 @@ module.exports = {
     allowBreakingChanges: ['新增', '修复'],
 
     // 跳过要询问的步骤
-    // skipQuestions: ['subject', 'body', 'breaking', 'footer'],
+    skipQuestions: ['body', 'breaking', 'footer'],
 
     // subject 限制长度
     subjectLimit: 100,
