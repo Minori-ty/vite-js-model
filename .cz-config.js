@@ -13,7 +13,24 @@ module.exports = {
         { value: 'revert', name: 'revert:   回退' },
         { value: 'build', name: 'build:    打包' },
     ],
-    // override the messages, defaults are as follows
+    scopes: [
+        ['api', 'api相关'],
+        ['components', '组件相关'],
+        ['hooks', 'hook相关'],
+        ['tools', 'tools相关'],
+        ['styles', '样式相关'],
+        ['deps', '项目依赖相关'],
+        ['other', '其他修改相关'],
+        // 如果选择 custom，后面会让你再输入一个自定义的 scope。也可以不设置此项，把后面的 allowCustomScopes 设置为 true
+        ['custom', '以上都不是？我要自定义'],
+    ].map(([value, description]) => {
+        return {
+            value,
+            name: `${value.padEnd(30)} (${description})`,
+        }
+    }),
+
+    // 交互提示信息
     messages: {
         type: '请选择提交类型:',
         // scope: '请输入文件修改范围(可选):',
@@ -26,8 +43,11 @@ module.exports = {
         confirmCommit: '确认使用以上信息提交？(y/n/e/h)',
     },
     allowCustomScopes: true,
-    // allowBreakingChanges: ['feat', 'fix'],
-    skipQuestions: ['body', 'footer'],
-    // limit subject length, commitlint默认是72
-    subjectLimit: 72,
+    allowBreakingChanges: ['新增', '修复'],
+
+    // 跳过要询问的步骤
+    // skipQuestions: ['subject', 'body', 'breaking', 'footer'],
+
+    // subject 限制长度
+    subjectLimit: 100,
 }
