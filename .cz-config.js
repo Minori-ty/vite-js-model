@@ -10,8 +10,8 @@ module.exports = {
         { value: 'perf', name: 'perf:     性能优化' },
         { value: 'test', name: 'test:     增加测试' },
         { value: 'chore', name: 'chore:    构建过程或辅助工具的变动' },
-        { value: 'revert', name: 'revert:   回退' },
-        { value: 'build', name: 'build:    打包' },
+        { value: 'revert', name: 'revert:   代码回退' },
+        { value: 'build', name: 'build:    变更项目构建或外部依赖' },
     ],
     scopes: [
         ['api', 'api相关'],

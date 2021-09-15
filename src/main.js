@@ -8,6 +8,7 @@ import 'styles/global.less'
 // import 'element-plus/lib/theme-chalk/index.css'
 import ElementPlus from './plugins/element-plus'
 import App from './App.vue'
+import useRequest from './hooks/useRequest'
 
 // createApp(App).use(router).use(store).mount('#app')
-createApp(App).use(ElementPlus).use(router).use(store).mount('#app')
+createApp(App).use(ElementPlus).use(useRequest).use(router).use(store).mount('#app')

@@ -9,11 +9,10 @@ import viteImagemin from 'vite-plugin-imagemin'
 import html from 'vite-plugin-html'
 
 export default defineConfig({
-    base: './',
+    base: '/',
     resolve: {
         alias: {
             '/images': 'src/assets/images',
-            images: resolve(__dirname, 'src/assets/images'),
             styles: resolve(__dirname, 'src/styles'),
             router: resolve(__dirname, 'src/router'),
             views: resolve(__dirname, 'src/views'),
@@ -119,7 +118,7 @@ export default defineConfig({
         // },
     },
     server: {
-        host: '0.0.0.0',
+        // host: '0.0.0.0',
         port: 3001,
     },
 })

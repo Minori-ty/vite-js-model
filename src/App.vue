@@ -1,9 +1,5 @@
 <template>
-    <div>1</div>
-    <img src="images/1.png" alt="" />
-    <h1>1</h1>
-    <!-- <img src="./assets/images/1.png" alt="" /> -->
-    <img src="./assets/images/pic/contact.jpg" alt="" />
+    <img src="/images/logo.png" alt="" />
 </template>
 
 <script setup>
