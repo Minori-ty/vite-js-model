@@ -9,7 +9,8 @@
         "style": "stylelint \"src/**/*.{vue,css,less}\"",
         "prettier": "npx prettier --write \"**/**/*.{vue,css,less,json}\"",
         "all": "npm run prettier && npm run style && npm run --fix",
-        "test": "jest"
+        "test": "jest",
+        "prepare": "husky install"
     },
     "dependencies": {
         "axios": "^0.21.1",
@@ -39,6 +40,7 @@
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-prettier": "^3.4.0",
         "eslint-plugin-vue": "^7.16.0",
+        "husky": "^7.0.0",
         "jest": "^27.0.6",
         "less": "^4.1.1",
         "lint-staged": "^11.1.2",
