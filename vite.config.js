@@ -5,10 +5,26 @@ import styleImport from 'vite-plugin-style-import'
 import viteCompression from 'vite-plugin-compression'
 import externalGlobals from 'rollup-plugin-external-globals'
 import ViteComponents, { ElementPlusResolver } from 'vite-plugin-components'
-import viteImagemin from 'vite-plugin-imagemin'
+// import viteImagemin from 'vite-plugin-imagemin'
 
 export default defineConfig({
-    base: './',
+    base: '/',
+    resolve: {
+        alias: {
+            '/images': 'src/assets/images',
+            styles: resolve(__dirname, 'src/styles'),
+            router: resolve(__dirname, 'src/router'),
+            views: resolve(__dirname, 'src/views'),
+            components: resolve(__dirname, 'src/components'),
+            data: resolve(__dirname, 'src/data'),
+            utils: resolve(__dirname, 'src/utils'),
+            src: resolve(__dirname, 'src'),
+            assets: resolve(__dirname, 'src/assets'),
+            mobile: resolve(__dirname, 'src/views/Mobile'),
+            PC: resolve(__dirname, 'src/views/PC'),
+            '/pic': 'src/assets/images/pic',
+        },
+    },
     plugins: [
         vue(),
         // 按需引入组件
@@ -31,51 +47,35 @@ export default defineConfig({
             algorithm: 'gzip',
             ext: '.gz',
         }),
-        viteImagemin({
-            gifsicle: {
-                optimizationLevel: 7,
-                interlaced: false,
-            },
-            optipng: {
-                optimizationLevel: 7,
-            },
-            mozjpeg: {
-                quality: 50,
-            },
-            pngquant: {
-                quality: [0.8, 0.9],
-                speed: 4,
-            },
-            svgo: {
-                plugins: [
-                    {
-                        name: 'removeViewBox',
-                    },
-                    {
-                        name: 'removeEmptyAttrs',
-                        active: false,
-                    },
-                ],
-            },
-        }),
+        // viteImagemin({
+        //     gifsicle: {
+        //         optimizationLevel: 7,
+        //         interlaced: false,
+        //     },
+        //     optipng: {
+        //         optimizationLevel: 7,
+        //     },
+        //     mozjpeg: {
+        //         quality: 50,
+        //     },
+        //     pngquant: {
+        //         quality: [0.8, 0.9],
+        //         speed: 4,
+        //     },
+        //     svgo: {
+        //         plugins: [
+        //             {
+        //                 name: 'removeViewBox',
+        //             },
+        //             {
+        //                 name: 'removeEmptyAttrs',
+        //                 active: false,
+        //             },
+        //         ],
+        //     },
+        // }),
     ],
-    resolve: {
-        alias: {
-            '/images': 'src/assets/images',
-            images: 'src/assets/images',
-            styles: resolve(__dirname, 'src/styles'),
-            router: resolve(__dirname, 'src/router'),
-            views: resolve(__dirname, 'src/views'),
-            components: resolve(__dirname, 'src/components'),
-            data: resolve(__dirname, 'src/data'),
-            utils: resolve(__dirname, 'src/utils'),
-            src: resolve(__dirname, 'src'),
-            assets: resolve(__dirname, 'src/assets'),
-            mobile: resolve(__dirname, 'src/views/Mobile'),
-            PC: resolve(__dirname, 'src/views/PC'),
-            '/pic': 'src/assets/images/pic',
-        },
-    },
+
     // 引入全局scss文件
     css: {
         preprocessorOptions: {
@@ -114,7 +114,7 @@ export default defineConfig({
         },
     },
     server: {
-        host: '0.0.0.0',
+        // host: '0.0.0.0',
         port: 3001,
     },
 })

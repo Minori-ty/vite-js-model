@@ -1,11 +1,8 @@
 {
-    "path-autocomplete.pathMappings": {
-        "$root": "${folder}/src/",
-        "images": "${folder}/src/assets/images",
-        "public": "${folder}/public"
-    },
-    "gutterpreview.sourceFolder": "D:/program/test/vite/vite-model/src/assets/images",
-    "gutterpreview.paths": {
-        "images/": "D:/program/test/vite/vite-model/src/assets/images/"
-    }
+    // "path-autocomplete.pathMappings": {
+    //     "$root": "${folder}/src/",
+    //     "images": "${folder}/src/assets/images",
+    //     "public": "${folder}/public"
+    // },
+    // "gutterpreview.sourceFolder": "D:/program/test/vite/vite-model/src/assets/images",
 }
