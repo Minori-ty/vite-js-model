@@ -6,6 +6,7 @@ import viteCompression from 'vite-plugin-compression'
 import externalGlobals from 'rollup-plugin-external-globals'
 import ViteComponents, { ElementPlusResolver } from 'vite-plugin-components'
 // import viteImagemin from 'vite-plugin-imagemin'
+import html from 'vite-plugin-html'
 
 export default defineConfig({
     base: '/',
@@ -74,6 +75,9 @@ export default defineConfig({
         //         ],
         //     },
         // }),
+        html({
+            minify: true,
+        }),
     ],
 
     // 引入全局scss文件
