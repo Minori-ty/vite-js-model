@@ -59,8 +59,7 @@
         "vite-plugin-html": "^2.1.0",
         "vite-plugin-style-import": "^1.1.1",
         "vue-jest": "^3.0.7",
-        "vue-template-compiler": "^2.6.14",
-        "yorkie": "^2.0.0"
+        "vue-template-compiler": "^2.6.14"
     },
     "config": {
         "commitizen": {
