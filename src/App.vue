@@ -1,7 +1,6 @@
 <template>
     <img src="/images/logo.png" alt="" />
     <el-button type="danger">点击</el-button>
-    <!-- <img src="./assets/images/1.png" alt="" /> -->
 </template>
 
 <script setup>
