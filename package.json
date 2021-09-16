@@ -13,6 +13,11 @@
         "prepare": "husky install",
         "commit": "git add . && git cz"
     },
+    "husky": {
+        "hooks": {
+            "pre-push": "lint-staged"
+        }
+    },
     "lint-staged": {
         "*.{js,vue}": "eslint",
         "src/**/*.{vue,css,less}": "stylelint"
