@@ -1,5 +1,6 @@
 <template>
-    <img src="/images/logo.png" alt="" />
+    <!-- <img src="/images/logo.png" alt="" /> -->
+    <img src="./assets/images/1.png" alt="" />
 </template>
 
 <script setup>
