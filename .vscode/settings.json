@@ -29,7 +29,6 @@
     },
     "powermode.shakeIntensity": 0,
     "powermode.enabled": true,
-    "editor.fontSize": 20,
     "editor.renderIndentGuides": false,
     //  #去掉代码结尾的分号
     "prettier.semi": false,
@@ -44,7 +43,6 @@
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "json.schemaDownload.enable": false,
     "px2xx.width": 1920,
-    "workbench.colorTheme": "Tokyo Night Storm",
     "workbench.iconTheme": "vscode-icons",
     "highlight-matching-tag.styles": {
         "opening": {
