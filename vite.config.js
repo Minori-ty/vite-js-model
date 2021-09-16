@@ -131,4 +131,3 @@ export default defineConfig({
 //     "*.{js,vue}": "eslint",
 //     "src/**/*.{vue,css,less}": "stylelint"
 // },
-
