@@ -125,7 +125,6 @@ export default defineConfig({
 
 // package.json:
 // "gitHooks": {
-//     "pre-commit": "npm run all",
 //     "pre-push": "lint-staged"
 // },
 // "lint-staged": {

@@ -1,4 +1,4 @@
 module.exports = {
-    '*.{js,vue}': 'eslint',
-    'src/**/*.{vue,css,less}': 'stylelint',
+    '*.{js,vue}': ['eslint --fix'],
+    'src/**/*.{vue,css,less}': ['stylelint --fix'],
 }
