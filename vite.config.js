@@ -5,7 +5,7 @@ import styleImport from 'vite-plugin-style-import'
 import viteCompression from 'vite-plugin-compression'
 import externalGlobals from 'rollup-plugin-external-globals'
 import ViteComponents, { ElementPlusResolver } from 'vite-plugin-components'
-// import viteImagemin from 'vite-plugin-imagemin'
+import viteImagemin from 'vite-plugin-imagemin'
 import html from 'vite-plugin-html'
 
 export default defineConfig({
@@ -48,33 +48,33 @@ export default defineConfig({
             algorithm: 'gzip',
             ext: '.gz',
         }),
-        // viteImagemin({
-        //     gifsicle: {
-        //         optimizationLevel: 7,
-        //         interlaced: false,
-        //     },
-        //     optipng: {
-        //         optimizationLevel: 7,
-        //     },
-        //     mozjpeg: {
-        //         quality: 50,
-        //     },
-        //     pngquant: {
-        //         quality: [0.8, 0.9],
-        //         speed: 4,
-        //     },
-        //     svgo: {
-        //         plugins: [
-        //             {
-        //                 name: 'removeViewBox',
-        //             },
-        //             {
-        //                 name: 'removeEmptyAttrs',
-        //                 active: false,
-        //             },
-        //         ],
-        //     },
-        // }),
+        viteImagemin({
+            gifsicle: {
+                optimizationLevel: 7,
+                interlaced: false,
+            },
+            optipng: {
+                optimizationLevel: 7,
+            },
+            mozjpeg: {
+                quality: 50,
+            },
+            pngquant: {
+                quality: [0.8, 0.9],
+                speed: 4,
+            },
+            svgo: {
+                plugins: [
+                    {
+                        name: 'removeViewBox',
+                    },
+                    {
+                        name: 'removeEmptyAttrs',
+                        active: false,
+                    },
+                ],
+            },
+        }),
         html({
             minify: true,
         }),
@@ -99,23 +99,23 @@ export default defineConfig({
         // 取消计算文件大小，加快打包速度
         brotliSize: false,
         sourcemap: true,
-        assetsDir: 'static/img/',
-        rollupOptions: {
-            output: {
-                chunkFileNames: 'static/js/[name]-[hash].js',
-                entryFileNames: 'static/js/[name]-[hash].js',
-                assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
-            },
+        // assetsDir: 'static/img',
+        // rollupOptions: {
+        //     output: {
+        //         chunkFileNames: 'static/js/[name]-[hash].js',
+        //         entryFileNames: 'static/js/[name]-[hash].js',
+        //         // assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
+        //     },
 
-            // 配置CDN
-            external: ['element-plus', 'vue'],
-            plugins: [
-                externalGlobals({
-                    vue: 'Vue',
-                    'element-plus': 'ElementPlus',
-                }),
-            ],
-        },
+        //     // 配置CDN
+        //     external: ['element-plus', 'vue'],
+        //     plugins: [
+        //         externalGlobals({
+        //             vue: 'Vue',
+        //             'element-plus': 'ElementPlus',
+        //         }),
+        //     ],
+        // },
     },
     server: {
         // host: '0.0.0.0',
