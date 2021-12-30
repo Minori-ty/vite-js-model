@@ -29,17 +29,17 @@ export default defineConfig({
     plugins: [
         vue(),
         // 按需引入组件
-        ViteComponents({ customComponentResolvers: [ElementPlusResolver()] }),
+        // ViteComponents({ customComponentResolvers: [ElementPlusResolver()] }),
         // 按需引入样式
-        styleImport({
-            libs: [
-                {
-                    libraryName: 'element-plus',
-                    esModule: true,
-                    resolveStyle: name => `element-plus/lib/theme-chalk/${name}.css`,
-                },
-            ],
-        }),
+        // styleImport({
+        //     libs: [
+        //         {
+        //             libraryName: 'element-plus',
+        //             esModule: true,
+        //             resolveStyle: name => `element-plus/lib/theme-chalk/${name}.css`,
+        //         },
+        //     ],
+        // }),
         viteCompression({
             //生成压缩包gz
             verbose: true,
@@ -100,22 +100,23 @@ export default defineConfig({
         brotliSize: false,
         sourcemap: true,
         // assetsDir: 'static/img',
-        // rollupOptions: {
-        //     output: {
-        //         chunkFileNames: 'static/js/[name]-[hash].js',
-        //         entryFileNames: 'static/js/[name]-[hash].js',
-        //         // assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
-        //     },
+        rollupOptions: {
+            //     output: {
+            //         chunkFileNames: 'static/js/[name]-[hash].js',
+            //         entryFileNames: 'static/js/[name]-[hash].js',
+            //         // assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
+            //     },
 
-        //     // 配置CDN
-        //     external: ['element-plus', 'vue'],
-        //     plugins: [
-        //         externalGlobals({
-        //             vue: 'Vue',
-        //             'element-plus': 'ElementPlus',
-        //         }),
-        //     ],
-        // },
+            //     // 配置CDN
+            external: ['element-plus', 'vue'],
+            plugins: [
+                externalGlobals({
+                    vue: 'Vue',
+                    'element-plus': 'ElementPlus',
+                    'element-plus/dist/index.css': 'foo',
+                }),
+            ],
+        },
     },
     server: {
         // host: '0.0.0.0',

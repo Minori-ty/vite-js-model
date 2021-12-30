@@ -1,9 +1,9 @@
 {
     "version": "0.0.0",
     "scripts": {
-        "dev": "vite",
+        "dev": "vite --open",
         "build": "vite build",
-        "serve": "vite preview",
+        "serve": "vite preview --open",
         "lint": "eslint \"src/**/*.{js,vue}\"",
         "fix": "eslint \"src/**/*.{js,vue}\" --fix",
         "style": "stylelint \"src/**/*.{vue,css,less}\"",
@@ -15,7 +15,7 @@
     },
     "dependencies": {
         "axios": "^0.21.4",
-        "element-plus": "^1.0.2-beta.71",
+        "element-plus": "^1.2.0-beta.6",
         "normalize.css": "^8.0.1",
         "nprogress": "^0.2.0",
         "vite-plugin-compression": "^0.3.5",
