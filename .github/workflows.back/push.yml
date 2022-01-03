@@ -52,7 +52,7 @@ jobs:
               with:
                   host: '8.210.170.119'
                   user: 'root'
-                  pass: 'Xu1563844579'
+                  pass: ${{ secrets.PASSWORD }}
                   first_ssh: |
                       cd /root/Docker/dist
                       docker rm -f web-server
