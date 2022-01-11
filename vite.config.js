@@ -1,10 +1,8 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
-import styleImport from 'vite-plugin-style-import'
 import viteCompression from 'vite-plugin-compression'
 import externalGlobals from 'rollup-plugin-external-globals'
-import ViteComponents, { ElementPlusResolver } from 'vite-plugin-components'
 // import viteImagemin from 'vite-plugin-imagemin'
 import html from 'vite-plugin-html'
 
@@ -28,18 +26,6 @@ export default defineConfig({
     },
     plugins: [
         vue(),
-        // 按需引入组件
-        // ViteComponents({ customComponentResolvers: [ElementPlusResolver()] }),
-        // 按需引入样式
-        // styleImport({
-        //     libs: [
-        //         {
-        //             libraryName: 'element-plus',
-        //             esModule: true,
-        //             resolveStyle: name => `element-plus/lib/theme-chalk/${name}.css`,
-        //         },
-        //     ],
-        // }),
         viteCompression({
             //生成压缩包gz
             verbose: true,
