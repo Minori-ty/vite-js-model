@@ -2,9 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import viteCompression from 'vite-plugin-compression'
-import externalGlobals from 'rollup-plugin-external-globals'
 // import viteImagemin from 'vite-plugin-imagemin'
-import html from 'vite-plugin-html'
 import importToCDN from 'vite-plugin-cdn-import'
 
 export default defineConfig({
@@ -77,9 +75,6 @@ export default defineConfig({
         //         ],
         //     },
         // }),
-        html({
-            minify: true,
-        }),
     ],
 
     // 引入全局scss文件
@@ -103,11 +98,11 @@ export default defineConfig({
         sourcemap: true,
         // assetsDir: 'static/img',
         rollupOptions: {
-            //     output: {
-            //         chunkFileNames: 'static/js/[name]-[hash].js',
-            //         entryFileNames: 'static/js/[name]-[hash].js',
-            //         // assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
-            //     },
+            output: {
+                chunkFileNames: 'js/[name]-[hash].js',
+                entryFileNames: 'js/[name]-[hash].js',
+                assetFileNames: '[ext]/[name]-[hash].[ext]',
+            },
             //     // 配置CDN
         },
     },
