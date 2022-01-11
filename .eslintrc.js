@@ -7,29 +7,16 @@ module.exports = {
     },
     extends: ['plugin:vue/vue3-essential', 'eslint:recommended', '@vue/prettier'],
     parserOptions: {
-        parser: '@babel/eslint-parser',
+        ecmaVersion: 2020,
+        sourceType: 'module',
     },
     rules: {
-        'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-        'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-        'prettier/prettier': [
-            'warn',
-            {
-                singleQute: true,
-                semi: false,
-                // trailingComma:'es5',
-                endOfLine: 'auto',
-            },
-        ],
-        indent: [
-            2,
-            4,
-            {
-                SwitchCase: 1,
-            },
-        ],
+        'prettier/prettier': 'error',
     },
     globals: {
         defineProps: 'readonly',
+        defineEmits: 'readonly',
+        defineComponent: 'readonly',
+        defineExpose: 'readonly',
     },
 }

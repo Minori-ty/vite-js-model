@@ -5,6 +5,7 @@ import viteCompression from 'vite-plugin-compression'
 import externalGlobals from 'rollup-plugin-external-globals'
 // import viteImagemin from 'vite-plugin-imagemin'
 import html from 'vite-plugin-html'
+import importToCDN from 'vite-plugin-cdn-import'
 
 export default defineConfig({
     base: '/',
@@ -33,6 +34,21 @@ export default defineConfig({
             threshold: 10240,
             algorithm: 'gzip',
             ext: '.gz',
+        }),
+        importToCDN({
+            modules: [
+                {
+                    name: 'vue',
+                    var: 'Vue',
+                    path: 'https://unpkg.com/vue@next',
+                },
+                {
+                    name: 'element-plus',
+                    var: 'ElementPlus',
+                    path: `https://unpkg.com/element-plus`,
+                    css: 'https://unpkg.com/element-plus/dist/index.css',
+                },
+            ],
         }),
         // viteImagemin({
         //     gifsicle: {
@@ -92,16 +108,7 @@ export default defineConfig({
             //         entryFileNames: 'static/js/[name]-[hash].js',
             //         // assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
             //     },
-
             //     // 配置CDN
-            external: ['element-plus', 'vue'],
-            plugins: [
-                externalGlobals({
-                    vue: 'Vue',
-                    'element-plus': 'ElementPlus',
-                    'element-plus/dist/index.css': 'foo',
-                }),
-            ],
         },
     },
     server: {
