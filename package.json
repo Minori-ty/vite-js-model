@@ -10,7 +10,6 @@
         "prettier": "npx prettier --write \"**/**/*.{vue,css,less,json}\"",
         "all": "npm run prettier && npm run style && npm run --fix",
         "test": "jest",
-        "prepare": "husky install",
         "prepush": "lint-staged -c .lintstagedrc.js"
     },
     "dependencies": {
@@ -37,6 +36,7 @@
         "autoprefixer": "^10.4.2",
         "babel-core": "^6.26.3",
         "babel-jest": "^27.4.6",
+        "core-js": "^3.20.3",
         "commitizen": "^4.2.4",
         "cz-conventional-changelog": "^3.3.0",
         "cz-customizable": "^6.3.0",
