@@ -57,5 +57,6 @@
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "extensions.ignoreRecommendations": true
+    "extensions.ignoreRecommendations": true,
+    "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass"]
 }

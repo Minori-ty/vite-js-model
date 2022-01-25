@@ -1,8 +1,8 @@
 <template>
     <router-view></router-view>
     <el-button type="primary">点击</el-button>
-    <!-- <img src="/images/logo.png" alt="" /> -->
-    <img src="/images/1.png" alt="" />
+    <img src="/images/logo.png" alt="" />
+    <!-- <img src="/images/1.png" alt="" /> -->
 </template>
 
 <script setup>
@@ -14,9 +14,4 @@ window.onresize = () => {
 }
 </script>
 
-<style scoped lang="scss">
-div {
-    width: 100%;
-    height: 100%;
-}
-</style>
+<style scoped lang="scss"></style>
