@@ -12,6 +12,8 @@ window.onresize = () => {
     let flag2 = isMobile() ?? 'null'
     if (flag1[0] != flag2[0]) location.reload()
 }
+
+// import { ElMessage, ElMessageBox, ElNotification } from 'element-plus'
 </script>
 
 <style scoped lang="scss"></style>

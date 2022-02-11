@@ -18,5 +18,8 @@ module.exports = {
         defineEmits: 'readonly',
         defineComponent: 'readonly',
         defineExpose: 'readonly',
+        ElMessage: 'readonly',
+        ElNotification: 'readonly',
+        ElMessageBox: 'readonly',
     },
 }
