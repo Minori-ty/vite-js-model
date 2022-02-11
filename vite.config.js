@@ -99,7 +99,7 @@ export default defineConfig({
             },
         },
         // 取消计算文件大小，加快打包速度
-        brotliSize: false,
+        reportCompressedSize: false,
         sourcemap: true,
         // assetsDir: 'static/img',
         rollupOptions: {
