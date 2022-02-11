@@ -37,7 +37,6 @@ export default defineConfig({
             algorithm: 'gzip',
             ext: '.gz',
         }),
-<<<<<<< HEAD
         // 配置CDN
         importToCDN({
             modules: [
@@ -81,56 +80,6 @@ export default defineConfig({
                 ],
             },
         }),
-=======
-        AutoImport({
-            resolvers: [ElementPlusResolver()],
-        }),
-        Components({
-            resolvers: [ElementPlusResolver()],
-        }),
-        // importToCDN({
-        //     modules: [
-        //         {
-        //             name: 'vue',
-        //             var: 'Vue',
-        //             path: 'https://unpkg.com/vue@next',
-        //         },
-        //         {
-        //             name: 'element-plus',
-        //             var: 'ElementPlus',
-        //             path: `https://unpkg.com/element-plus`,
-        //             css: 'https://unpkg.com/element-plus/dist/index.css',
-        //         },
-        //     ],
-        // }),
-        // viteImagemin({
-        //     gifsicle: {
-        //         optimizationLevel: 7,
-        //         interlaced: false,
-        //     },
-        //     optipng: {
-        //         optimizationLevel: 7,
-        //     },
-        //     mozjpeg: {
-        //         quality: 50,
-        //     },
-        //     pngquant: {
-        //         quality: [0.8, 0.9],
-        //         speed: 4,
-        //     },
-        //     svgo: {
-        //         plugins: [
-        //             {
-        //                 name: 'removeViewBox',
-        //             },
-        //             {
-        //                 name: 'removeEmptyAttrs',
-        //                 active: false,
-        //             },
-        //         ],
-        //     },
-        // }),
->>>>>>> 9083395 (docs(components): element-plus)
     ],
 
     // 引入全局scss文件
