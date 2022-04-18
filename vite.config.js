@@ -88,6 +88,22 @@ export default defineConfig({
             // scss: {
             //     additionalData: '@import "./src/styles/variables";',
             // },
+
+            //消除element-plus警告
+            postcss: {
+                plugins: [
+                    {
+                        postcssPlugin: 'internal:charset-removal',
+                        AtRule: {
+                            charset: atRule => {
+                                if (atRule.name === 'charset') {
+                                    atRule.remove()
+                                }
+                            },
+                        },
+                    },
+                ],
+            },
         },
     },
     build: {
