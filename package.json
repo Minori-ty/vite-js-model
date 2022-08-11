@@ -8,7 +8,7 @@
         "lint:eslint": "eslint --cache \"src/**/*.{js,vue}\"",
         "lint:fix": "eslint --cache \"src/**/*.{js,vue}\" --fix",
         "lint:style": "stylelint \"src/**/*.{vue,css,less}\"",
-        "lint:prettier": "npx prettier --cache --write \"**/**/*.{vue,css,less,json}\"",
+        "lint:prettier": "npx prettier --cache --write \"**/**/*.{vue,ts,tsx,scss,less,css,json}\"",
         "all": "npm run lint:prettier && npm run lint:style && npm run lint:fix --fix",
         "test": "jest",
         "prepare": "husky install",
