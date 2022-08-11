@@ -2,6 +2,9 @@ module.exports = {
     ignores: [commit => commit.includes('init')],
     extends: ['@commitlint/config-conventional'],
     rules: {
+        // 0是关闭规则，1是警告，2是错误
+        // always/never 颠倒规则
+        // 期望值
         'body-leading-blank': [2, 'always'],
         'footer-leading-blank': [1, 'always'],
         'header-max-length': [2, 'always', 108],

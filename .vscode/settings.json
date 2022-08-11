@@ -37,7 +37,6 @@
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
-    "json.schemaDownload.enable": false,
     "px2xx.width": 1920,
     "workbench.iconTheme": "vscode-icons",
     "highlight-matching-tag.styles": {

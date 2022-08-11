@@ -6,3 +6,4 @@ dist-ssr
 .vercel
 pnpm-lock.yaml
 npm-lock.yaml
+.eslintcache
