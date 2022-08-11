@@ -1,7 +1,4 @@
 {
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
-    },
     "editor.formatOnType": true,
     "editor.formatOnSave": true,
     "terminal.integrated.tabs.enabled": true,
@@ -27,9 +24,8 @@
         "source.fixAll.eslint": true
         // "source.fixAll.stylelint": true
     },
-    "powermode.shakeIntensity": 0,
+    "powermode.shake.intensity": 0,
     "powermode.enabled": true,
-    "editor.renderIndentGuides": false,
     //  #去掉代码结尾的分号
     "prettier.semi": false,
     //  #使用带引号替代双引号
@@ -58,5 +54,6 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "extensions.ignoreRecommendations": true,
-    "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass"]
+    "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass"],
+    "editor.guides.indentation": false
 }
