@@ -2,7 +2,7 @@
 
 module.exports = {
     types: [
-        { value: ':sparkles:', name: 'feat:     新功能' },
+        { value: 'sparkles', name: 'feat:     新功能' },
         { value: ':wrensh:', name: 'fix:      修复bug' },
         { value: ':page_facing_up:', name: 'docs:     文档变更' },
         { value: ':art:', name: 'style:    代码格式(不影响代码运行的变动)' },
