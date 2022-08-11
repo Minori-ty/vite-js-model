@@ -10,7 +10,7 @@
         "prettier": "npx prettier --write \"**/**/*.{vue,css,less,json}\"",
         "all": "npm run prettier && npm run style && npm run --fix",
         "test": "jest",
-        "prepush": "lint-staged -c .lintstagedrc.js"
+        "prepush": "lint-staged -c .lintstagedrc.cjs"
     },
     "dependencies": {
         "axios": "^0.24.0",
