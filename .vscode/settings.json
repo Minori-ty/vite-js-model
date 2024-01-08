@@ -21,8 +21,7 @@
         "enable": true
     },
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-        // "source.fixAll.stylelint": true
+        "source.fixAll.eslint": "explicit"
     },
     "powermode.shake.intensity": 0,
     "powermode.enabled": true,
@@ -54,5 +53,6 @@
     },
     "extensions.ignoreRecommendations": true,
     "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass"],
-    "editor.guides.indentation": false
+    "editor.guides.indentation": false,
+    "stylelint.configFile": ".stylelintrc.js"
 }

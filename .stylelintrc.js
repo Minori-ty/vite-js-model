@@ -6,6 +6,7 @@ module.exports = {
         'stylelint-config-recommended-vue/scss',
     ],
     plugins: ['stylelint-order'],
+    customSyntax: 'postcss-html',
     rules: {
         'no-descending-specificity': null,
         'function-url-quotes': 'always',

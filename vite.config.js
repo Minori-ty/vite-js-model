@@ -38,21 +38,21 @@ export default defineConfig({
             ext: '.gz',
         }),
         // 配置CDN
-        importToCDN({
-            modules: [
-                {
-                    name: 'vue',
-                    var: 'Vue',
-                    path: 'https://unpkg.com/vue@next',
-                },
-                {
-                    name: 'element-plus',
-                    var: 'ElementPlus',
-                    path: `https://unpkg.com/element-plus`,
-                    css: 'https://unpkg.com/element-plus/dist/index.css',
-                },
-            ],
-        }),
+        // importToCDN({
+        //     modules: [
+        //         {
+        //             name: 'vue',
+        //             var: 'Vue',
+        //             path: 'https://unpkg.com/vue@next',
+        //         },
+        //         {
+        //             name: 'element-plus',
+        //             var: 'ElementPlus',
+        //             path: `https://unpkg.com/element-plus`,
+        //             css: 'https://unpkg.com/element-plus/dist/index.css',
+        //         },
+        //     ],
+        // }),
         viteImagemin({
             gifsicle: {
                 optimizationLevel: 7,
@@ -85,9 +85,9 @@ export default defineConfig({
     // 引入全局scss文件
     css: {
         preprocessorOptions: {
-            // scss: {
-            //     additionalData: '@import "./src/styles/variables";',
-            // },
+            scss: {
+                additionalData: '@import "./src/styles/variables";',
+            },
 
             //消除element-plus警告
             postcss: {
